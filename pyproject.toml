@@ -24,3 +24,5 @@ dependencies = [
     "pydantic>=2.0.0",
 ]
 
+[tool.vercel]
+pythonVersion = "3.11"
