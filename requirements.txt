@@ -1,28 +1,16 @@
-# FastAPI + Uvicorn
-fastapi>=0.138.0
-uvicorn>=0.23.1
-
-# File uploads & environment
-python-multipart>=0.0.20
-python-dotenv>=1.0.1
 dnspython>=2.8.0
-
-# LangChain + Agents
+fastapi>=0.124.0
 langchain>=1.1.2
-langchain-core>=1.1.2
 langchain-community>=0.3.0
 langchain-openai>=1.1.0
 langchain-pinecone>=0.2.13
 langchain-text-splitters>=1.0.0
 langgraph>=1.0.4
-
-# Pinecone + Database
 pinecone-client>=6.0.0
+pydantic-settings>=2.0.0
 pymongo>=4.16.0
-
-# PDF handling
 pypdf>=6.4.1
-
-# Pydantic v2 (with pydantic-core)
-pydantic>=2.7.1
-pydantic-core>=2.7.1
+python-dotenv>=1.2.1
+python-multipart>=0.0.20
+uvicorn>=0.38.0
+pydantic>=2.0.0
