@@ -1,17 +1,11 @@
-from fastapi import FastAPI
+import sys
+import os
+from pathlib import Path
 
-# Debugging Vercel 500 Error
-# import sys
-# import os
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-# from src.app.api import app
+# Add the parent directory to sys.path so we can import from main.py
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-app = FastAPI()
+from main import app
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello World from minimal FastAPI"}
-
-@app.get("/{path:path}")
-def catch_all(path: str):
-    return {"message": f"Cached {path}"}
+# Vercel needs the app object to be available at the top level
+# of the file specified in vercel.json
